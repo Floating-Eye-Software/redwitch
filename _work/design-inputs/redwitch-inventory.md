@@ -2,14 +2,16 @@
 
 **Inventory date:** 2026-06-06  
 **Scope:** Local Red Witch-related repositories, current GitHub repository
-state, `redwitch.ca`, and Red Witch authority references in `fley-org`.
+state, the `redwitch.ca` apex site, the `www` redirect, docs published under
+`/docs/`, and Red Witch authority references in `fley-org`.
 
 ## Executive Summary
 
-Red Witch remains an incubating FLEY product, but its visible product repository
-and website make it look abandoned. The public `redwitch` repository was last
-pushed in September 2022, its committed README contains only a heading, and its
-GitHub Pages site displays only `redwitch`.
+Red Witch remains an incubating FLEY product, but its visible product
+repository and public surfaces still need cleanup. The public `redwitch`
+repository was last pushed in September 2022, its committed README contains
+only a heading, and the repository now has explicit apex-site and docs routing
+instead of a single legacy Pages hostname.
 
 Substantial Red Witch planning did happen after 2022. Most activity occurred in
 the Red Witch GitHub wiki during 2024 and 2025. That content was then migrated
@@ -25,8 +27,9 @@ The result is an authority and discoverability problem:
   historical migration source.
 - `fley-qms` contains the richest Red Witch product documentation, but
   `Project-Docs/` is absent from its authoritative `main` branch.
-- `redwitch.ca` is deployed from `redwitch/docs/` but contains no useful public
-  content.
+- `redwitch/site/` is now the intended apex site source for `redwitch.ca`,
+  `www.redwitch.ca` should redirect to the apex, and `redwitch/docs/` is the
+  GitHub Pages source for the documentation surface under `/docs/`.
 - `fley-org` registers Red Witch as an incubating peer product while still
   recording its active status and classification as needing verification.
 
@@ -36,12 +39,14 @@ No files outside this report were changed during the inventory.
 
 | Surface | Observed State | Current or Intended Role |
 | --- | --- | --- |
-| `../redwitch/` | Product repository. Six tracked files. Last commit and push on 2022-09-04. Local worktree is dirty. | Intended Red Witch product repository and GitHub Pages source. |
+| `../redwitch/` | Product repository. Six tracked files. Last commit and push on 2022-09-04. Local worktree is dirty. | Intended Red Witch product repository and public site source tree (`site/`), with docs published from `docs/`. |
 | `../redwitch.wiki/` | Clean wiki checkout with 16 tracked files. Last commit on 2025-10-29: `archive QMS content, refs #28`. | Historical Red Witch project documentation and original QMS prototype. |
 | `../fley-qms/` | Controlled QMS repository. Local branch `feature/qms-foundation`; worktree is dirty and contains newer untracked Red Witch drafts. | FLEY QMS authority, plus the current de facto home of Red Witch product documents. |
 | `../fley-qms.bak/` | Approximately 54 MB, 108 files, no commits, and every file untracked. | Legacy QMS backup; not a Red Witch authority. |
 | `../fley-org/` | Registers Red Witch as an incubating peer product and product repository candidate. | Portfolio, repository topology, and authority-routing source. |
-| `https://www.redwitch.ca` | GitHub Pages site generated from `redwitch/docs/`; displays only the heading `redwitch`. | Intended public Red Witch site. |
+| `https://redwitch.ca` | NFS/Apache apex site served from `redwitch/site/`; canonical public landing page and entry point. | Intended public Red Witch site. |
+| `https://www.redwitch.ca` | Redirects to `https://redwitch.ca`. | Legacy hostname, redirect only. |
+| `https://redwitch.ca/docs/` | GitHub Pages docs surface published from `redwitch/docs/`; relative links resolve under `/docs/`. | Active documentation surface. |
 | `Floating-Eye-Software/redwitch` | Public GitHub repository with issues, projects, wiki, Pages, and discussions enabled. Twenty open issues observed. | Current GitHub product repository. |
 | `mlehotay/redwitch` | Redirects to `Floating-Eye-Software/redwitch`. | Historical repository URL, not a separate repository. |
 
@@ -66,15 +71,19 @@ Tracked content:
 
 Committed public-site content:
 
-- `docs/CNAME` contains `www.redwitch.ca`.
-- `docs/index.md` contains only `# redwitch`.
-- GitHub Pages is enabled and serves this content at `www.redwitch.ca`.
+- `docs/CNAME` contains `www.redwitch.ca` from the historical Pages setup.
+- `docs/index.md` is a landing page that points to `docs/product/` and notes
+  that `redwitch.wiki` is historical.
+- The intended final routing is `redwitch.ca` at the apex, `www` redirecting
+  to the apex, and GitHub Pages content exposed under `/docs/`.
 
 Local worktree caveats:
 
 - `README.md` has an uncommitted replacement containing a generic project
   README template with unresolved placeholders.
 - `undefined - Imgur.png` is an untracked 632 by 474 PNG.
+- `site/` is the new static public-site source tree, modeled after the
+  `site-ops/site/` layout and kept separate from the documentation tree.
 - Neither local change should currently be treated as authoritative product
   content.
 
@@ -82,7 +91,7 @@ Current GitHub metadata observed through the public GitHub API:
 
 - Repository: `Floating-Eye-Software/redwitch`
 - Description: `GDPR compliant period tracking app`
-- Homepage: `https://www.redwitch.ca`
+- Homepage: `https://redwitch.ca`
 - Default branch: `main`
 - Created: 2022-07-13
 - Last repository push: 2022-09-05 UTC
@@ -139,6 +148,11 @@ The wiki also contains stale or broken authority links:
 
 The final commit message and migration history support treating the wiki as a
 historical source rather than the current editing surface.
+
+Live-site note:
+
+- Reverify the `www` redirect after deployment; the intended final routing is
+  apex site plus docs under `/docs/`.
 
 ### `fley-qms`
 
@@ -280,7 +294,7 @@ The observed Red Witch documentation lineage is:
 | Authority Area | Recommended Source |
 | --- | --- |
 | Red Witch product identity, source, roadmap, requirements, architecture, privacy design, and project working documents | `redwitch` repository |
-| Public-facing product overview and selected documentation | `redwitch/docs/`, published to `redwitch.ca` |
+| Public-facing product overview and selected documentation | `redwitch/site/` for the apex overview, plus `redwitch/docs/` published under `/docs/` |
 | Historical Red Witch wiki and migration history | `redwitch.wiki`, clearly marked archived/read-only |
 | Controlled QMS processes, SOPs, work instructions, templates, compliance mappings, approvals, and quality records | `fley-qms` |
 | Portfolio status, repository ownership, and authority routing | `fley-org` |
@@ -314,9 +328,10 @@ records rather than duplicate uncontrolled copies.
 
 4. Make `redwitch.ca` useful.
 
-   Expand `redwitch/docs/` into a public landing page that explains the
+   Keep `redwitch/site/` as the public apex landing page that explains the
    privacy-first cycle-tracking concept, current incubating status, and where
-   current documentation and governance records live.
+   current documentation and governance records live. Keep `redwitch/docs/`
+   as the GitHub Pages documentation source under `/docs/`.
 
 5. Move or reconstruct current product documentation under `redwitch`.
 
@@ -358,9 +373,9 @@ A reader arriving at any Red Witch surface should be routed consistently:
 
 - GitHub product repository: what Red Witch is, its current status, and where
   to work on it.
-- `redwitch.ca`: public product explanation and selected public documentation.
+- `redwitch.ca`: public product explanation and selected public documentation
+  from the apex site, with docs under `/docs/`.
 - Product documents: one editable authoritative location under `redwitch`.
 - QMS records: controlled sources under `fley-qms`.
 - Portfolio state: concise authoritative entry under `fley-org`.
 - Wiki and backups: clearly historical, retained only for traceability.
-
