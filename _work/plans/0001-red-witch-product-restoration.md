@@ -45,7 +45,7 @@ In scope:
 - create a coherent product-document structure in `redwitch`
 - migrate or reconstruct authoritative product documents with provenance
 - replace the placeholder repository README
-- define and write the `redwitch.ca` public-site content
+- define and write the `www.redwitch.ca` public-site content
 - reconcile Red Witch product issues
 - convert the wiki into a clearly historical archive
 - leave controlled QMS records and approvals in `fley-qms`
@@ -79,9 +79,10 @@ _work/
     plans/
 ```
 
-`docs/index.md` should serve both as the public-site entry point and as a clear
-route to the broader product documentation. Public output must distinguish
-working drafts from reviewed or controlled claims.
+`site/index.html` should serve as the public-site entry point, while
+`docs/index.md` should provide a clear route to the broader product
+documentation. Public output must distinguish working drafts from reviewed or
+controlled claims.
 
 ## Work Plan
 

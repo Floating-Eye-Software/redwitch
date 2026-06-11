@@ -55,3 +55,34 @@ Key outcomes:
 Remaining manual step:
 
 - Verify the live `www.redwitch.ca` redirect after deployment.
+
+---
+
+# codex-002 - Routing Consistency Cleanup
+
+**Plan:** `ad hoc`
+**Priority:** P2
+**Status:** recorded
+**Timestamp:** 2026-06-10 23:10 EDT
+
+## Changes
+
+Updated repository-facing documentation and work notes to match the deployed
+topology:
+
+- `https://www.redwitch.ca/` is the canonical public website.
+- `https://redwitch.ca/` redirects to the public website.
+- `https://docs.redwitch.ca/` is the documentation site.
+- `https://docs.redwitch.ca/product/` is the product documentation index.
+- `redwitch.wiki` is historical only.
+
+Changed files:
+
+- `README.md`
+- `docs/index.md`
+- `docs/product/index.md`
+- `_work/notes/redwitch-hosting-notes.md`
+- `_work/codex-log.md`
+
+This was a cleanup pass only. No repository structure or deployment process
+was introduced.

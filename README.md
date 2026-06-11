@@ -22,7 +22,7 @@ consolidation.
 
 Product documentation:
 
-docs/product/
+https://docs.redwitch.ca/product/
 
 Key documents:
 
@@ -52,7 +52,12 @@ redwitch.wiki
 
 ## Public Site
 
-www.redwitch.ca
+https://www.redwitch.ca/
+https://redwitch.ca/ redirects to the public site.
+
+## Documentation Site
+
+https://docs.redwitch.ca/
 
 ## Philosophy
 

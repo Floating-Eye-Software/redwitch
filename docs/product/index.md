@@ -1,6 +1,7 @@
 # Red Witch Product Documentation
 
-This is the landing page for the Red Witch product documentation set.
+This is the landing page for the Red Witch product documentation set at
+https://docs.redwitch.ca/product/.
 
 ## Core Documents
 
@@ -25,5 +26,5 @@ This is the landing page for the Red Witch product documentation set.
 
 ## Notes
 
-- The documentation home page is [docs home](../).
+- The documentation home page is [docs.redwitch.ca](https://docs.redwitch.ca/).
 - `redwitch.wiki` is the historical archive.

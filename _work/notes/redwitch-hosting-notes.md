@@ -5,8 +5,10 @@ or DNS details.
 
 ## Intended Deployment Flow
 
-- `redwitch/site/` is the source for the public apex site.
-- `redwitch.ca` is the live public site.
+- `redwitch/site/` is the source for the public website at
+  `https://www.redwitch.ca/`.
+- `redwitch.ca` redirects to `https://www.redwitch.ca/`.
+- `docs.redwitch.ca` is the documentation site.
 - A deployment process in `../site-ops/` is expected to publish the site.
 - The exact deployment process is TBD.
 

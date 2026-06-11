@@ -149,7 +149,8 @@ The intended authority model is:
 | Inference governance   | redwitch      |
 | Threat model           | redwitch      |
 | Roadmap                | redwitch      |
-| Public website content | redwitch      |
+| Public website content | www.redwitch.ca |
+| Documentation site     | docs.redwitch.ca |
 | QMS procedures         | fley-qms      |
 | Compliance records     | fley-qms      |
 | Controlled processes   | fley-qms      |
@@ -242,17 +243,21 @@ The wiki should not remain an active documentation authority.
 Current deployment:
 
 ```text
-redwitch/docs/
-        ↓
-GitHub Pages
-        ↓
+site/
+  ↓
 www.redwitch.ca
+
+docs/
+  ↓
+GitHub Pages
+  ↓
+docs.redwitch.ca
 ```
 
 Historically the website contained almost no content.
 
-One objective of the restoration effort is to turn the site into a useful
-public-facing project page.
+One objective of the restoration effort is to turn the public site into a
+useful project page and keep the documentation site separate.
 
 The website should explain:
 
