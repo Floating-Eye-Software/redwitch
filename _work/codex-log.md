@@ -86,3 +86,22 @@ Changed files:
 
 This was a cleanup pass only. No repository structure or deployment process
 was introduced.
+
+---
+
+# codex-003 - Split-Root Canonical Comment Update
+
+**Plan:** `ad hoc`
+**Priority:** P2
+**Status:** recorded
+**Timestamp:** 2026-06-22 EDT
+
+## Changes
+
+Added a small explanatory comment to the apex redirect root and canonical
+`www` page so the Red Witch split-root layout is explicit in source:
+
+- `sites/redwitch.ca/.htaccess` is redirect-only
+- `sites/www.redwitch.ca/index.html` is the canonical content page
+
+This documents the server-side topology without changing the page content.
