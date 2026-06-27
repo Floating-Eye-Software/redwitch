@@ -105,3 +105,25 @@ Added a small explanatory comment to the apex redirect root and canonical
 - `sites/www.redwitch.ca/index.html` is the canonical content page
 
 This documents the server-side topology without changing the page content.
+
+---
+
+# codex-004 - Product Restoration Status Reconciliation
+
+**Plan:** `0001-red-witch-product-restoration`
+**Priority:** P1
+**Status:** recorded
+**Timestamp:** 2026-06-27 EDT
+
+## Changes
+
+- Added the repository plan dashboard.
+- Moved Plan 0001 to `doing` because the product-document inventory,
+  authoritative product drafts, README, documentation routes, and static
+  public surfaces already exist.
+- Left authority migration, issue reconciliation, wiki archival, and
+  effectiveness verification open.
+
+## Verification
+
+- `git diff --check`
