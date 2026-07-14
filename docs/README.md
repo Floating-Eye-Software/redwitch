@@ -1,11 +1,5 @@
 # Red Witch Documentation
 
-This is the landing page for the Red Witch documentation set at
-https://docs.redwitch.ca/.
-
-The active documentation lives directly under `docs/`.
-`docs/product/` is no longer the canonical location.
-
 ## Core Documents
 
 - [Master Document List](Red-Witch-Master-Document-List.md)
@@ -29,5 +23,6 @@ The active documentation lives directly under `docs/`.
 
 ## Notes
 
+- The Red Witch home page is [www.redwitch.ca](https://www.redwitch.ca/).
 - The documentation home page is [docs.redwitch.ca](https://docs.redwitch.ca/).
-- `redwitch.wiki` is the historical archive.
+- The Red Witch [wiki](https://github.com/Floating-Eye-Software/redwitch/wiki) is the historical archive.
