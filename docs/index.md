@@ -1,14 +1,33 @@
 # Red Witch Documentation
 
-This repository publishes the Red Witch product documentation at
-https://docs.redwitch.ca/ from `docs/product/`.
+This is the landing page for the Red Witch documentation set at
+https://docs.redwitch.ca/.
 
-- [Enter the product documentation index](product/)
+The active documentation lives directly under `docs/`.
+`docs/product/` is no longer the canonical location.
+
+## Core Documents
+
+- [Master Document List](Red-Witch-Master-Document-List.md)
+- [Requirements](Red-Witch-Requirements.md)
+- [Software Architecture](Red-Witch-Software-Architecture.md)
+- [Privacy](Red-Witch-Privacy.md)
+- [Threat Model](Red-Witch-Threat-Model.md)
+- [Privacy Assessment](Red-Witch-Privacy-Assessment.md)
+- [Inference Governance](Red-Witch-Inference-Governance.md)
+- [Roadmap](Red-Witch-Roadmap.md)
+- [Quality Plan](Red-Witch-Quality-Plan.md)
+- [Risk Management](Red-Witch-Risk-Management.md)
+- [Post-Market Surveillance](Red-Witch-Post-Market-Surveillance.md)
+- [Accessibility](Red-Witch-Accessibility.md)
+- [Users](Red-Witch-Users.md)
+- [UI Overlay](Red-Witch-UI-Overlay.md)
+- [Market Analysis](Red-Witch-Market-Analysis.md)
+- [Market Comparison](Red-Witch-Market-Comparison.md)
+- [Peer Review](Red-Witch-Peer-Review.md)
+- [Data Sovereignty](Red-Witch-Data-Sovereignty.md)
 
 ## Notes
 
-- `docs/product/` is the canonical location for active product-owned
-  documentation in this repository.
-- `docs.redwitch.ca` is the live documentation site.
-- `redwitch.wiki` remains the historical archive and should not be treated as
-  the live product document set.
+- The documentation home page is [docs.redwitch.ca](https://docs.redwitch.ca/).
+- `redwitch.wiki` is the historical archive.
